@@ -28,23 +28,7 @@ export const EntryFilters = () => {
 
 eventHub.addEventListener("click", e => {
     if (e.target.id === "clearMood") {
-        eventHub.dispatchEvent(new CustomEvent("moodCleared"))
 
-        document.querySelector("#moodFilter--sad").checked = false
-        document.querySelector("#moodFilter--happy").checked = false
-        document.querySelector("#moodFilter--ok").checked = false
-    }
-})
-
-eventHub.addEventListener("keyup", e => {
-    if (e.target.id === "filter__searchTerm") {
-        const search = new CustomEvent("searchTermChanged", {
-            detail: {
-                term: e.target.value
-            }
-        })
-
-        eventHub.dispatchEvent(search)
     }
 })
 
@@ -55,8 +39,6 @@ eventHub.addEventListener("change", e => {
                 mood: e.target.value
             }
         })
-
-        eventHub.dispatchEvent(mood)
     }
 })
 

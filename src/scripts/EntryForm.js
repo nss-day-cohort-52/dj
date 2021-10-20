@@ -24,9 +24,6 @@ export const EntryForm = () => {
             <fieldset class="fieldset">
                 <label for="journalDate">Mood for the day</label>
                 <select name="mood" id="entryForm__mood">
-                    <option value="sad">Sad</option>
-                    <option value="ok">Ok</option>
-                    <option value="happy">Happy</option>
                 </select>
             </fieldset>
             <input type="hidden" id="entryForm__id" value="" />
@@ -79,8 +76,9 @@ eventHub.addEventListener("click", e => {
             saveJournalEntry(newEntry)
                 .then(createdEntry => {
                     const tagCreationPromises = []
-                    tags.forEach(tag => tagCreationPromises.push(addTagsToEntry(createdEntry, tag)))
-                    Promise.all(tagCreationPromises).then(getEntryTags)
+
+
+                    Promise.all("this should be an array of promises").then(getEntryTags)
                 })
         }
 

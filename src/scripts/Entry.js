@@ -2,13 +2,6 @@ import { deleteJournalEntry } from "./EntryDataProvider.js";
 
 const eventHub = document.querySelector(".container")
 
-eventHub.addEventListener("click", e => {
-    if (e.target.id.startsWith("deleteEntry--")) {
-        const [prompt, id] = e.target.id.split("--")
-
-        deleteJournalEntry(parseInt(id))
-    }
-})
 
 eventHub.addEventListener("click", e => {
     if (e.target.id.startsWith("editEntry--")) {
