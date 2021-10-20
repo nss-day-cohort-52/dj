@@ -163,11 +163,6 @@
       "id": 12
     },
     {
-      "entryId": 3,
-      "tagId": 12,
-      "id": 13
-    },
-    {
       "entryId": 7,
       "tagId": 11,
       "id": 14
@@ -202,13 +197,6 @@
       "entry": "We learned how to use the JavaScript fetch command to POST information to our API",
       "mood": "happy",
       "id": 2
-    },
-    {
-      "id": 3,
-      "date": 1597056847100,
-      "concept": "Web API",
-      "entry": "Cohort 27 started on Web API sprint today",
-      "mood": "happy"
     },
     {
       "id": 4,

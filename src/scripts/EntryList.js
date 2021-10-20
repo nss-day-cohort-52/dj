@@ -1,5 +1,5 @@
 import { Entry as EntryConverter } from "./Entry.js"
-import { getJournalEntries, searchEntries, useEntries } from "./EntryDataProvider.js"
+import { deleteJournalEntry, getJournalEntries, searchEntries, useEntries } from "./EntryDataProvider.js"
 import { getEntryTags, getTags, useEntryTags, useTags } from "./TagsProvider.js"
 
 const eventHub = document.querySelector(".container")
@@ -52,6 +52,14 @@ eventHub.addEventListener("searchTermChanged", e => {
         entries = results
         render()
     })
+})
+
+eventHub.addEventListener("click", e => {
+    const buttonClicked = e.target
+    if(buttonClicked.id.startsWith("deleteEntry")){
+        const [,buttonId] = buttonClicked.id.split("--")//comma is used to cast the array from split to individual variables. could add more comma for things with more splits. nothing before the comma cuz we don't need to refer to it
+            deleteJournalEntry(buttonId)
+    }
 })
 
 eventHub.addEventListener("moodSelected", e => {
