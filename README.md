@@ -1,12 +1,12 @@
-= Daily Journal
+# Daily Journal
 
-Implementation of Daily Journal project. It currently doesn't have dynamic moods _(for one to many chapter)_ but it does have tagging _(many to many chapter)_.
+Implementation of Daily Journal project.
 
-== Prerequisites
+## Prerequisites
 
 1. Install `json-server` with `npm i -g json-server`.
 
-== Running
+## Running
 
 1. `cd` into API directory and run `json-server -p 8088 entries.json`
 1. In another terminal window, `cd` into the `src` directory and start your simple web server.
