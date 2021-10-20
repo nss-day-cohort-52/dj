@@ -24,6 +24,11 @@ export const EntryForm = () => {
             <fieldset class="fieldset">
                 <label for="journalDate">Mood for the day</label>
                 <select name="mood" id="entryForm__mood">
+                <option value="">--Please choose an option--</option>
+                <option value="angry">Angry</option>
+                <option value="ok">Ok</option>
+                <option value="sad">Sad</option>
+                <option value="happy">Happy</option>
                 </select>
             </fieldset>
             <input type="hidden" id="entryForm__id" value="" />
